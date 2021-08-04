@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Blog CSS</title>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <meta name="keywords" content="Blog CSS, Code, CSS, Blog" />
+    <meta name="description" content="An easy way to preview CSS" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="/css/home.css" />
+    <script src="/js/home.js" defer></script>
+
+    <link rel="icon" href="/img/css.png" />
   </head>
   <body>
-    Test 123
+    <div id="editor">
+      <div id="css-wrapper">
+        <textarea id="css-text" placeholder="Write your CSS here..."></textarea>
+      </div>
+
+      <div id="info">
+        <div id="saved">Your changes are saved automatically</div>
+        |
+        <div id="helper">Press the escape key to preview</div>
+      </div>
+
+      <a id="help" href="/help"><img src="/img/question.png" alt="help" /></a>
+    </div>
   </body>
 </html>

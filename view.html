@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog CSS - View</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="Blog CSS, Code, CSS, Blog" />
+    <meta name="description" content="An easy way to preview CSS" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="/css/view.css" />
+    <script src="/js/view.js" defer></script>
+    <script src="/js/blog.js"></script>
+
+    <link rel="icon" href="/img/css.png" />
+
+    <link rel="stylesheet" href="/default-styles/community_common.css" />
+    <link rel="stylesheet" href="/default-styles/main.css" />
+    <link rel="stylesheet" href="/default-styles/hyperion.css" />
+    <link rel="stylesheet" href="/default-styles/feed.css" />
+    <link rel="stylesheet" href="/default-styles/codemirrorEdited.css" />
+
+    <style id="custom-styles"></style>
+  </head>
+  <body class="community modal-page-overflow">
+    <div id="page-wrapper">
+      <div id="navigation_box">
+        <div id="left_navigation_box">
+          <a href="https://artofproblemsolving.com/community">Community</a> »
+          <a href="https://artofproblemsolving.com/community">Blogs</a> »
+          <a data-blog="" href=".">Test Blog</a>
+        </div>
+        <div id="right_navigation_box">
+          <a
+            href="."
+            id="blog-subscribe"
+            class="clickable"
+            title="Click to receive email notifications for new posts in this blog"
+          >
+            Subscribe
+          </a>
+          •
+          <a href="." class="blog-logout">Logout Halp!</a>
+          •
+          <a class="blog-info" href=".">Blog Info</a>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div id="wrapper">
+        <div id="header">
+          <a data-blog="" href="."><h1>Test Blog</h1></a>
+        </div>
+        <div id="content">
+          <div id="main">
+            <p id="post-new-entry-p">
+              <img
+                id="post-new-entry-img"
+                src="https://artofproblemsolving.com/m/community/img/blogs/hyperion/bs_edit.gif"
+              /><a id="post-new-entry" href="">Post New Entry</a>
+            </p>
+            <div>
+              <div class="entry" id="post-2380853">
+                <h1>
+                  <a
+                    data-blog=""
+                    href="https://artofproblemsolving.com/community/user/37932"
+                    >Hello World!</a
+                  >
+                </h1>
+                <h2>
+                  <a data-blog="" href="/community/c1300740h2380853_test_entry"
+                    ><img
+                      src="https://artofproblemsolving.com/m/community/img/blogs/hyperion/icon_post_target.gif"
+                      alt="" /></a
+                  >by
+                  <strong
+                    ><a
+                      href="/community/user/364963"
+                      style="color: #bd4f17"
+                      class="username-coloured"
+                      >AoPS</a
+                    ></strong
+                  >, Feb 8, 2015, 10:38 AM
+                </h2>
+                <div class="entrywrap">
+                  <div class="message">
+                    Hello World
+                    <br /><br />
+
+                    <!-- hide tag -->
+                    <span
+                      class="cmty-hide-heading faux-link"
+                      onclick="show_hide('hide-1')"
+                      href="#"
+                      >Click to open hide tag</span
+                    >
+                    <div
+                      class="cmty-hide-content"
+                      id="hide-1"
+                      style="display: none"
+                    >
+                      Hide tag content
+                    </div>
+
+                    <!-- tip tag -->
+                    <span
+                      class="cmty-tip-header first-time"
+                      onmouseover="show_tip('triangle-1', 'tip-1')"
+                      onmouseout="hide_tip('triangle-1', 'tip-1')"
+                      style="position: relative"
+                      href="#"
+                      >Hover to show tip content</span
+                    >
+                    <div
+                      class="cmty-tip-triangle"
+                      id="triangle-1"
+                      style="
+                        display: none;
+                        position: absolute;
+                        margin-left: 250px;
+                      "
+                    ></div>
+                    <div
+                      class="cmty-tip-content"
+                      id="tip-1"
+                      style="
+                        display: none;
+                        position: absolute;
+                        margin-top: 10px;
+                        margin-left: 210px;
+                      "
+                    >
+                      Tip Content
+                    </div>
+
+                    <!-- python -->
+                    <pre
+                      class="python"
+                      style="
+                        font-family: monospace;
+                        background-color: #f4f6f4;
+                        padding: 10px;
+                      "
+                    ><span style="color: #ff7700;font-weight:bold;">print</span><span style="color: black;">(</span><span style="color: #483d8b;">'hello world'</span><span style="color: black;">)</span></pre>
+                    <!-- pywindow -->
+                    <div
+                      id="pywindow7672f75789aa007c43c638e1d6dd31cf"
+                      class="pywindow"
+                      style="z-index: 0"
+                    >
+                      <div style="display: block">
+                        <div
+                          class="
+                            pywindow-temp-preview-code pywindow-one-digit-lines
+                          "
+                          onclick="pythonTool.addCodeSourceAndClick(event);"
+                        >
+                          <pre
+                            class="python"
+                            style="font-family: monospace"
+                          ><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #ff7700;font-weight:bold;">print</span><span style="color: black;">(</span><span style="color: #483d8b;">"hello"</span><span style="color: black;">)</span></div></li></ol></pre>
+                        </div>
+                        <textarea
+                          rows="1"
+                          id="pywindow7672f75789aa007c43c638e1d6dd31cf_code"
+                          style="display: none"
+                          class="active-code"
+                          prefixcode="undefined"
+                        >
+print("hello")</textarea
+                        >
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          class="btn btn-run"
+                          onclick="pythonTool.addCodeSourceAndRun('pywindow7672f75789aa007c43c638e1d6dd31cf', false);"
+                        >
+                          Run</button
+                        ><button
+                          type="button"
+                          class="btn btn-reset"
+                          onclick="pythonTool.addCodeSource('pywindow7672f75789aa007c43c638e1d6dd31cf', false);"
+                        >
+                          Reset</button
+                        ><button
+                          type="button"
+                          class="btn btn-link btn-pop"
+                          onclick="pythonTool.addCodeSourceAndPop('pywindow7672f75789aa007c43c638e1d6dd31cf', false);"
+                        >
+                          Pop Out <span class="aops-font">/</span>
+                        </button>
+                        <div style="clear: both"></div>
+                      </div>
+                      <div
+                        id="pywindow7672f75789aa007c43c638e1d6dd31cf_error"
+                      ></div>
+                      <div style="text-align: center">
+                        <canvas
+                          id="pywindow7672f75789aa007c43c638e1d6dd31cf_canvas"
+                          class="ac-canvas"
+                          height="400px"
+                          width="400px"
+                          style="
+                            border-style: solid;
+                            display: none;
+                            text-align: center;
+                          "
+                        ></canvas>
+                      </div>
+                      <pre
+                        id="pywindow7672f75789aa007c43c638e1d6dd31cf_pre"
+                        class="active-out active-out-hidden"
+                      ></pre>
+                      <div
+                        id="pywindow7672f75789aa007c43c638e1d6dd31cf_files"
+                        class="ac-files ac-files-hidden"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="cmty-post-attachments"></div>
+                  <div class="cmty-post-edit-info"></div>
+                  <div class="cmty-tags-itembox-wrapper">
+                    <div class="cmty-itembox">
+                      <div
+                        title="Edit tags"
+                        class="cmty-item-tag cmty-edit-tag aops-font"
+                        style="background-color: rgb(53, 108, 181)"
+                      >
+                        L
+                      </div>
+                    </div>
+                  </div>
+                  <!--<div class="post-tags">
+				:
+					<a data-blog class="post-tag" href="http://www.artofproblemsolving.com/Forum/blog.php?u=1163&amp;tag=Beast Academy">Beast Academy</a>
+				</div>-->
+
+                  <div class="efooter">
+                    <div class="actions">
+                      <ul>
+                        <li>
+                          <a
+                            data-blog=""
+                            class="post-replies"
+                            href="/community/c1300740h2380853_test_entry"
+                            >One Comment</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            data-blog=""
+                            class="post-comment"
+                            href="/community/c1300740h2380853s3_test_entry"
+                            >(Post Your Comment)</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modactions">
+                      <ul>
+                        <li>
+                          <a href="" class="blog-edit-post" title="Edit"
+                            ><span>Edit</span></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="blog-moderate-topic"
+                            title="Moderate"
+                            ><span>Moderate</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="side">
+            <div id="user-menu-widget" class="block user_menu">
+              <div style="text-align: center">
+                <p class="description">AoPS's Blog!</p>
+                <p class="avatar">
+                  <img
+                    src="/img/avatar.png"
+                    alt="avatar"
+                    width="70"
+                    height="70"
+                  />
+                </p>
+                <strong class="user-full">
+                  <a
+                    href="https://artofproblemsolving.com/community/user/37932"
+                    class="username-colored"
+                    >AoPS</a
+                  >
+                </strong>
+              </div>
+            </div>
+            <div id="archive-widget" class="widget">
+              <div class="widget-header">
+                <div class="widget-title">Archives</div>
+              </div>
+              <div class="widget-settings"></div>
+              <div class="widget-content">
+                <div class="archive-month archive-2020">
+                  <span class="archive-month-header">
+                    <strong>
+                      <img
+                        class="month-image"
+                        alt="-"
+                        src="https://artofproblemsolving.com/m/community/img/blogs/hyperion/minus.gif"
+                      />
+                      Febuary 2015
+                    </strong>
+                  </span>
+                  <div class="archive-month-topics">
+                    <div class="archive-row">
+                      <a href="." data-blog="">Hello World!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-footer"></div>
+            </div>
+            <div id="shouts-widget" class="widget">
+              <div class="widget-header">
+                <div class="widget-title">Shouts</div>
+              </div>
+              <div id="message-box">
+                <textarea
+                  id="message"
+                  class="inputbox"
+                  cols="10"
+                  rows="6"
+                ></textarea>
+                <div id="shout-helper">
+                  <span id="charsleft"></span><span id="submit">Submit</span>
+                </div>
+              </div>
+
+              <div class="widget-settings"></div>
+              <div class="widget-content">
+                <!-- <fieldset class="blog-shout-wrapper">
+                  <div
+                    class="
+                      aops-scroll-outer aops-scrollbar-not-visible
+                      blog-scroll-outer
+                    "
+                  >
+                    <div class="aops-scroll-bar" style="display: none">
+                      <div
+                        class="aops-scroll-slider"
+                        style="display: none; top: 0px"
+                      ></div>
+                    </div>
+                    <div
+                      class="aops-scroll-inner"
+                      style="overflow-y: scroll; width: calc(100% + 15px)"
+                    >
+                      <ul class="aops-scroll-content"></ul>
+                    </div>
+                  </div>
+                </fieldset> -->
+                <fieldset class="blog-shout-wrapper">
+                  <div
+                    class="
+                      aops-scroll-outer aops-scrollbar-not-visible
+                      blog-scroll-outer
+                    "
+                  >
+                    <div class="aops-scroll-bar" style="display: none">
+                      <div
+                        class="aops-scroll-slider"
+                        style="
+                          display: none;
+                          top: -1308.56px;
+                          height: 1692.56px;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      class="aops-scroll-inner"
+                      style="overflow-y: scroll; width: calc(100% + 16px)"
+                    >
+                      <ul class="aops-scroll-content">
+                        <li class="blog-shout row1">
+                          <p></p>
+                          Hi!!
+                          <p>
+                            <span class="aops-icon blog-delete-shout">J</span>by
+                            <a
+                              href="https://artofproblemsolving.com/community/user/34863"
+                              >GameBot</a
+                            >, a minute ago
+                          </p>
+                        </li>
+                        <li class="blog-shout row2">
+                          <p></p>
+                          Hello!
+                          <p>
+                            <span class="aops-icon blog-delete-shout">J</span>by
+                            <a
+                              href="https://artofproblemsolving.com/community/user/10"
+                              >Halp!</a
+                            >, 3 minutes ago
+                          </p>
+                        </li>
+                        <li class="blog-shout row1">
+                          <p></p>
+                          Hi
+                          <p>
+                            <span class="aops-icon blog-delete-shout">J</span>by
+                            <a
+                              href="https://artofproblemsolving.com/community/user/34863"
+                              >AoPS</a
+                            >, 10 minutes ago
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </fieldset>
+                <span class="blog-num-shouts">0 shouts</span>
+              </div>
+              <div class="widget-footer"></div>
+            </div>
+            <div>
+              <div class="widget-header">
+                <div class="widget-title">Tags</div>
+              </div>
+              <div class="widget-settings"></div>
+              <div class="widget-content">
+                <!-- <fieldset class="blog-tags-wrapper">
+                  <div class="cmty-itembox">
+                    <div
+                      class="
+                        aops-scroll-outer aops-scrollbar-not-visible
+                        blog-scroll-outer
+                      "
+                    >
+                      <div class="aops-scroll-bar" style="display: none">
+                        <div
+                          class="aops-scroll-slider"
+                          style="
+                            display: none;
+                            top: -12602.7px;
+                            height: 12886.7px;
+                          "
+                        ></div>
+                      </div>
+                      <div
+                        class="aops-scroll-inner"
+                        style="overflow-y: scroll; width: calc(100% + 15px)"
+                      >
+                        <div
+                          class="cmty-itembox-inner-box aops-scroll-content"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset> -->
+              </div>
+              <div class="widget-footer"></div>
+            </div>
+            <div id="about-owner-widget" class="block widget">
+              <div class="widget-header">
+                <div class="widget-title">About Owner</div>
+              </div>
+              <div class="widget-settings"></div>
+              <div class="widget-content">
+                <ul style="padding-bottom: 0; margin-bottom: 0">
+                  <li style="padding-bottom: 3px">
+                    <strong>Posts:</strong>
+                    82941
+                  </li>
+                  <li style="padding-bottom: 3px">
+                    <strong>Joined:</strong>
+                    Feb 7, 2008
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-footer"></div>
+            </div>
+            <div id="stats-widget" class="block widget">
+              <div class="widget-header">
+                <div class="widget-title">Blog Stats</div>
+              </div>
+              <div class="widget-settings"></div>
+              <div class="widget-content">
+                <ul style="padding-bottom: 0; margin-bottom: 0">
+                  <li style="padding-bottom: 3px">
+                    <strong>Blog created:</strong>
+                    Sep 6, 2010
+                  </li>
+                  <li style="padding-bottom: 3px">
+                    <strong>Total entries:</strong>
+                    1
+                  </li>
+                  <li style="padding-bottom: 3px">
+                    <strong>Total visits:</strong>
+                    553
+                  </li>
+                  <li style="padding-bottom: 3px">
+                    <strong>Total comments:</strong>
+                    1
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-footer"></div>
+            </div>
+            <div id="search-widget" class="block widget">
+              <div class="widget-header">
+                <div class="widget-collapse"></div>
+                <div class="widget-config"></div>
+                <div class="widget-title">Search Blog</div>
+              </div>
+              <div class="widget-settings"></div>
+              <div class="widget-content">
+                <form id="blog_searchform">
+                  <fieldset>
+                    <input
+                      name="keywords"
+                      id="blog_keywords"
+                      type="text"
+                      maxlength="128"
+                      class="inputbox search"
+                      placeholder="Enter term"
+                    />
+                    <div style="text-align: right; margin-top: 3px">
+                      <input class="button2" value="Search" type="submit" />
+                    </div>
+                  </fieldset>
+                </form>
+                <!--		<div style="padding: 2px;"><a href="PUTSOMETHINGHERE" title="View advanced search options">Advanced Search</a></div>-->
+              </div>
+              <div class="widget-footer"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+      <div class="aops-html-modal-inner-epic-fail">
+        <div class="aops-html-modal-main-epic-fail">
+          <p>Something appears to not have loaded correctly.</p>
+        </div>
+        <div class="aops-html-modal-bottom-epic-fail">
+          <p>
+            <a onclick="location.reload(true);return false">Click to refresh</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="feed-wrapper">
+      <div id="feed-left">
+        <div data-hj-suppress="" data-hj-masked="" id="feed-tabs">
+          <div
+            id="feed-global-tab"
+            class="feed-tab aops-font feed-subfeed-new-topic"
+            title="Global feed
+Recent topics in select forums
+See Community Help to customize"
+          >
+            a
+          </div>
+          <div
+            id="feed-egosearch-tab"
+            class="feed-tab aops-font"
+            title="My Topics feed
+Topics I have posted in"
+          >
+            w
+          </div>
+          <div
+            id="feed-privates-tab"
+            class="feed-tab aops-font"
+            title="Private feed
+My private messages"
+          >
+            m
+          </div>
+          <div
+            id="feed-bookmark-tab"
+            title="Bookmark feed
+Topics from bookmarked tags, forums, and topics"
+            class="feed-tab aops-font"
+          >
+            E
+          </div>
+        </div>
+        <div data-hj-suppress="" data-hj-masked="" id="feed-topic"></div>
+      </div>
+      <div data-hj-suppress="" data-hj-masked="" id="feed-topic-list"></div>
+    </div>
+
+    <!-- pywindow scripts -->
+    <script src="./pywindow/codemirror-compressed.js"></script>
+    <script src="./pywindow/skulpt.min.js"></script>
+    <script src="./pywindow/skulpt-stdlib.js"></script>
+    <script src="./pywindow/aopsmods.js"></script>
+  </body>
+</html>
