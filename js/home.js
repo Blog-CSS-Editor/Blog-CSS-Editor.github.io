@@ -3,7 +3,7 @@ const savedDiv = $("#saved");
 
 $("body").on("keyup", (e) => {
   if (e.key === "Escape") {
-    location.href = "/view.html";
+    location.href = "/view";
   }
 });
 
