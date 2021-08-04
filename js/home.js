@@ -13,3 +13,4 @@ cssTextarea.on("input propertychange", () => {
 });
 
 cssTextarea.html(localStorage.getItem("css-text"));
+cssTextarea.focus();
