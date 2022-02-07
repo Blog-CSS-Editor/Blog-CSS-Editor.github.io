@@ -1,6 +1,6 @@
 # AoPS Blog CSS Editor
 
-Link: <a href="https://blog-css-editor.github.io/" target="_blank">https://blog-css-editor.github.io/</a>
+Link: <a href="https://aops-blog-css-editor.pages.dev" target="_blank">https://aops-blog-css-editor.pages.dev</a>
 
 It is an easy way to preview blog CSS, and even edit them! Simply write your css in the text box, then hit the escape key. It will show you the preview.
 
